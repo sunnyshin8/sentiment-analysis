@@ -62,6 +62,6 @@ X, y = vectorize(data)
 model = modelFunction(X, y, a)
 
 if model[0] == 1:
-    container.write("Positive Sentiment (:")
+    container.write("Positive Sentiment 😃")
 elif model[0] == 0:
-    container.write("Negative Sentiment ):")
+    container.write("Negative Sentiment 🙁")
