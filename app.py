@@ -48,10 +48,12 @@ def modelFunction(X, y, a):
     clf.fit(train_X, train_y)
     pred = clf.predict(a)
     return pred
+#make bg color black
 
 st.title("Sentiment Analysis Prediction")
 
 container = st.container()
+container.markdown('<style>body { background-color: black; color: white; }</style>', unsafe_allow_html=True)
 container.write("You need to press enter everytime, empty textbox will show \'Positve Sentiment\'")
 container.write()
 selected_text = container.text_input("Enter the text that you want to test")
@@ -66,3 +68,4 @@ if model[0] == 1:
     container.write("Positive Sentiment")
 elif model[0] == 0:
     container.write("Negative Sentiment")
+    #deploy
